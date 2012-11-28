@@ -2,18 +2,18 @@ require 'watir'
 require 'forgery'
 
 b = Watir::Browser.new
-admin_url = 'https://store-bwvr466.mybigcommerce.com/admin/'
+
+#update to your creds
+admin_url = 'ADMIN_URL'
 orders = 3
 #login
 b.goto admin_url
-b.text_field(:name=>'username').set 'saranyan'
-b.text_field(:name=>'password').set '__bigcommerce7__'
+b.text_field(:name=>'username').set 'USERNAME'
+b.text_field(:name=>'password').set 'PASSWORD'
 b.button(:type => 'submit').click
-
 
 orders.times do |i|
 	#add order
-	#b.link(:id => 'SubMenuAddAnOrder').when_present.click
 	b.span(:text => 'Orders').when_present.click
 	b.span(:text => 'Add an Order').click
 

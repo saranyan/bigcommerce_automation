@@ -1,3 +1,5 @@
+#Copyright (c) 2012 Saranyan
+
 require 'watir'
 require 'forgery'
 
